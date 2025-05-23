@@ -116,7 +116,7 @@ public class GameControllerScript : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         // Options
         // Options - Question 01
@@ -199,11 +199,11 @@ public class GameControllerScript : MonoBehaviour
         question09Screen = GameObject.Find("Question09Screen");
         question10Screen = GameObject.Find("Question10Screen");
         questionBScreen = GameObject.Find("QuestionBScreen");
-        //geneticCounselorScreen = GameObject.Find("GeneticCounselorScreen");
-        //foodScientistScreen = GameObject.Find("FoodScientistScreen");
-        //microbiologistScreen = GameObject.Find("MicrobiologistScreen");
-        //forensicScientistScreen = GameObject.Find("ForensicScientistScreen");
-        //pharmaceuticalSalesRepScreen = GameObject.Find("PharmaceuticalSalesRepScreen");
+        geneticCounselorScreen = GameObject.Find("GeneticCounselorScreen");
+        foodScientistScreen = GameObject.Find("FoodScientistScreen");
+        microbiologistScreen = GameObject.Find("MicrobiologistScreen");
+        forensicScientistScreen = GameObject.Find("ForensicScientistScreen");
+        pharmaceuticalSalesRepScreen = GameObject.Find("PharmaceuticalSalesRepScreen");
 
         // Buttons
         q01NextButton = GameObject.Find("q01NextButton");
@@ -219,6 +219,41 @@ public class GameControllerScript : MonoBehaviour
         qBNextButton = GameObject.Find("qBNextButton");
     }
 
+    void Start()
+    {
+        // Screens
+        question01Screen.SetActive(false);
+        question02Screen.SetActive(false);
+        question03Screen.SetActive(false);
+        question04Screen.SetActive(false);
+        question05Screen.SetActive(false);
+        question06Screen.SetActive(false);
+        question07Screen.SetActive(false);
+        question08Screen.SetActive(false);
+        question09Screen.SetActive(false);
+        question10Screen.SetActive(false);
+        questionBScreen.SetActive(false);
+        geneticCounselorScreen.SetActive(false);
+        foodScientistScreen.SetActive(false);
+        microbiologistScreen.SetActive(false);
+        forensicScientistScreen.SetActive(false);
+        pharmaceuticalSalesRepScreen.SetActive(false);
+
+        // Buttons
+        q01NextButton.SetActive(false);
+        q02NextButton.SetActive(false);
+        q03NextButton.SetActive(false);
+        q04NextButton.SetActive(false);
+        q05NextButton.SetActive(false);
+        q06NextButton.SetActive(false);
+        q07NextButton.SetActive(false);
+        q08NextButton.SetActive(false);
+        q09NextButton.SetActive(false);
+        q10NextButton.SetActive(false);
+        qBNextButton.SetActive(false);
+    }
+    
+    
     // Update is called once per frame
     void Update()
     {
