@@ -114,6 +114,21 @@ public class GameControllerScript : MonoBehaviour
     private GameObject q10NextButton;
     private GameObject qBNextButton;
 
+    // Data
+    // Data - Variables
+    private int questionNumber;
+    // Data - Bools
+    private bool question01Answered = false;
+    private bool question02Answered = false;
+    private bool question03Answered = false;
+    private bool question04Answered = false;
+    private bool question05Answered = false;
+    private bool question06Answered = false;
+    private bool question07Answered = false;
+    private bool question08Answered = false;
+    private bool question09Answered = false;
+    private bool question10Answered = false;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -252,8 +267,8 @@ public class GameControllerScript : MonoBehaviour
         q10NextButton.SetActive(false);
         qBNextButton.SetActive(false);
     }
-    
-    
+
+
     // Update is called once per frame
     void Update()
     {
@@ -263,7 +278,7 @@ public class GameControllerScript : MonoBehaviour
     public void StartGame()
     {
         startGameScreen.SetActive(false);
-        question01Screen.SetActive(true);
+        RandomQuestion01();
     }
 
     public void Q01Option01()
@@ -324,7 +339,10 @@ public class GameControllerScript : MonoBehaviour
     public void Q01Completed()
     {
         question01Screen.SetActive(false);
-        question02Screen.SetActive(true);
+        //question02Screen.SetActive(true);
+
+        question01Answered = true;
+        RandomQuestion01();
     }
 
     public void Q02Option01()
@@ -385,7 +403,10 @@ public class GameControllerScript : MonoBehaviour
     public void Q02Completed()
     {
         question02Screen.SetActive(false);
-        question03Screen.SetActive(true);
+        //question03Screen.SetActive(true);
+
+        question02Answered = true;
+        RandomQuestion01();
     }
 
     public void Q03Option01()
@@ -446,7 +467,10 @@ public class GameControllerScript : MonoBehaviour
     public void Q03Completed()
     {
         question03Screen.SetActive(false);
-        question04Screen.SetActive(true);
+        //question04Screen.SetActive(true);
+
+        question03Answered = true;
+        RandomQuestion01();
     }
 
     public void Q04Option01()
@@ -507,7 +531,10 @@ public class GameControllerScript : MonoBehaviour
     public void Q04Completed()
     {
         question04Screen.SetActive(false);
-        question05Screen.SetActive(true);
+        //question05Screen.SetActive(true);
+
+        question04Answered = true;
+        RandomQuestion01();
     }
 
     public void Q05Option01()
@@ -568,7 +595,10 @@ public class GameControllerScript : MonoBehaviour
     public void Q05Completed()
     {
         question05Screen.SetActive(false);
-        question06Screen.SetActive(true);
+        //question06Screen.SetActive(true);
+
+        question05Answered = true;
+        RandomQuestion01();
     }
 
     public void Q06Option01()
@@ -629,7 +659,10 @@ public class GameControllerScript : MonoBehaviour
     public void Q06Completed()
     {
         question06Screen.SetActive(false);
-        question07Screen.SetActive(true);
+        //question07Screen.SetActive(true);
+
+        question06Answered = true;
+        RandomQuestion01();
     }
 
     public void Q07Option01()
@@ -690,7 +723,10 @@ public class GameControllerScript : MonoBehaviour
     public void Q07Completed()
     {
         question07Screen.SetActive(false);
-        question08Screen.SetActive(true);
+        //question08Screen.SetActive(true);
+
+        question07Answered = true;
+        RandomQuestion01();
     }
 
     public void Q08Option01()
@@ -751,7 +787,10 @@ public class GameControllerScript : MonoBehaviour
     public void Q08Completed()
     {
         question08Screen.SetActive(false);
-        question09Screen.SetActive(true);
+        //question09Screen.SetActive(true);
+
+        question08Answered = true;
+        RandomQuestion01();
     }
 
     public void Q09Option01()
@@ -812,7 +851,10 @@ public class GameControllerScript : MonoBehaviour
     public void Q09Completed()
     {
         question09Screen.SetActive(false);
-        question10Screen.SetActive(true);
+        //question10Screen.SetActive(true);
+
+        question09Answered = true;
+        RandomQuestion01();
     }
 
     public void Q10Option01()
@@ -870,9 +912,17 @@ public class GameControllerScript : MonoBehaviour
         pharmaceuticalSalesRep += 1;
         q10NextButton.SetActive(true);
     }
-    public void Q10Completed()
+    public void Q10Completed01()
     {
         question10Screen.SetActive(false);
+
+        question10Answered = true;
+        RandomQuestion01();
+    }
+
+    public void Q10Completed02()
+    {
+        //question10Screen.SetActive(false);
         //question02Screen.SetActive(true);
 
         if ((geneticCounselor > foodScientist) && (geneticCounselor > microbiologist) && (geneticCounselor > forensicScientist) && (geneticCounselor > pharmaceuticalSalesRep))
@@ -958,6 +1008,8 @@ public class GameControllerScript : MonoBehaviour
     }
     public void QBCompleted()
     {
+        questionBScreen.SetActive(false);
+
         if ((geneticCounselor > foodScientist) && (geneticCounselor > microbiologist) && (geneticCounselor > forensicScientist) && (geneticCounselor > pharmaceuticalSalesRep))
         {
             geneticCounselorScreen.SetActive(true);
@@ -977,6 +1029,105 @@ public class GameControllerScript : MonoBehaviour
         else if ((pharmaceuticalSalesRep > foodScientist) && (pharmaceuticalSalesRep > microbiologist) && (pharmaceuticalSalesRep > forensicScientist) && (pharmaceuticalSalesRep > geneticCounselor))
         {
             pharmaceuticalSalesRepScreen.SetActive(true);
+        }
+    }
+
+    public void RandomQuestion01()
+    {
+        if (question01Answered == true && question02Answered == true && question03Answered == true && question04Answered == true && question05Answered == true && question06Answered == true && question07Answered == true && question08Answered == true && question09Answered == true && question10Answered == true)
+        {
+            Q10Completed02();
+        }
+        else
+        {
+            questionNumber = UnityEngine.Random.Range(1, 11);
+            RandomQuestionChecker();
+        }
+        //questionNumber = UnityEngine.Random.Range(1, 10);
+    }
+
+    public void RandomQuestionChecker()
+    {
+        if (questionNumber == 1 && question01Answered == true)
+        {
+            RandomQuestion01();
+        }
+        else if (questionNumber == 2 && question02Answered == true)
+        {
+            RandomQuestion01();
+        }
+        else if (questionNumber == 3 && question03Answered == true)
+        {
+            RandomQuestion01();
+        }
+        else if (questionNumber == 4 && question04Answered == true)
+        {
+            RandomQuestion01();
+        }
+        else if (questionNumber == 5 && question05Answered == true)
+        {
+            RandomQuestion01();
+        }
+        else if (questionNumber == 6 && question06Answered == true)
+        {
+            RandomQuestion01();
+        }
+        else if (questionNumber == 7 && question07Answered == true)
+        {
+            RandomQuestion01();
+        }
+        else if (questionNumber == 8 && question08Answered == true)
+        {
+            RandomQuestion01();
+        }
+        else if (questionNumber == 9 && question09Answered == true)
+        {
+            RandomQuestion01();
+        }
+        else if (questionNumber == 10 && question10Answered == true)
+        {
+            RandomQuestion01();
+        }
+        else
+        {
+            RandomQuestion02();
+        }
+    }
+
+    public void RandomQuestion02()
+    {
+        switch (questionNumber)
+        {
+            case 1:
+                question01Screen.SetActive(true);
+                break;
+            case 2:
+                question02Screen.SetActive(true);
+                break;
+            case 3:
+                question03Screen.SetActive(true);
+                break;
+            case 4:
+                question04Screen.SetActive(true);
+                break;
+            case 5:
+                question05Screen.SetActive(true);
+                break;
+            case 6:
+                question06Screen.SetActive(true);
+                break;
+            case 7:
+                question07Screen.SetActive(true);
+                break;
+            case 8:
+                question08Screen.SetActive(true);
+                break;
+            case 9:
+                question09Screen.SetActive(true);
+                break;
+            case 10:
+                question10Screen.SetActive(true);
+                break;
         }
     }
 }
