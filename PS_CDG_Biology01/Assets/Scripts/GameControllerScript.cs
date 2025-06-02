@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameControllerScript : MonoBehaviour
 {
@@ -73,6 +74,36 @@ public class GameControllerScript : MonoBehaviour
     private GameObject q10Option03;
     private GameObject q10Option04;
     private GameObject q10Option05;
+    // Options - Question 11
+    private GameObject q11Option01;
+    private GameObject q11Option02;
+    private GameObject q11Option03;
+    private GameObject q11Option04;
+    private GameObject q11Option05;
+    // Options - Question 12
+    private GameObject q12Option01;
+    private GameObject q12Option02;
+    private GameObject q12Option03;
+    private GameObject q12Option04;
+    private GameObject q12Option05;
+    // Options - Question 13
+    private GameObject q13Option01;
+    private GameObject q13Option02;
+    private GameObject q13Option03;
+    private GameObject q13Option04;
+    private GameObject q13Option05;
+    // Options - Question 14
+    private GameObject q14Option01;
+    private GameObject q14Option02;
+    private GameObject q14Option03;
+    private GameObject q14Option04;
+    private GameObject q14Option05;
+    // Options - Question 15
+    private GameObject q15Option01;
+    private GameObject q15Option02;
+    private GameObject q15Option03;
+    private GameObject q15Option04;
+    private GameObject q15Option05;
     // Options - Bonus Question
     private GameObject qBOption01;
     private GameObject qBOption02;
@@ -82,7 +113,9 @@ public class GameControllerScript : MonoBehaviour
 
 
     // Screens
+    // Screens - Start Game
     private GameObject startGameScreen;
+    // Screens - Questions
     private GameObject question01Screen;
     private GameObject question02Screen;
     private GameObject question03Screen;
@@ -93,7 +126,13 @@ public class GameControllerScript : MonoBehaviour
     private GameObject question08Screen;
     private GameObject question09Screen;
     private GameObject question10Screen;
+    private GameObject question11Screen;
+    private GameObject question12Screen;
+    private GameObject question13Screen;
+    private GameObject question14Screen;
+    private GameObject question15Screen;
     private GameObject questionBScreen;
+    // Screens - Job Options
     private GameObject geneticCounselorScreen;
     private GameObject foodScientistScreen;
     private GameObject microbiologistScreen;
@@ -101,6 +140,7 @@ public class GameControllerScript : MonoBehaviour
     private GameObject pharmaceuticalSalesRepScreen;
 
     // Buttons
+    // Buttons - Questions
     private GameObject q01NextButton;
     private GameObject q02NextButton;
     private GameObject q03NextButton;
@@ -111,11 +151,17 @@ public class GameControllerScript : MonoBehaviour
     private GameObject q08NextButton;
     private GameObject q09NextButton;
     private GameObject q10NextButton;
+    private GameObject q11NextButton;
+    private GameObject q12NextButton;
+    private GameObject q13NextButton;
+    private GameObject q14NextButton;
+    private GameObject q15NextButton;
     private GameObject qBNextButton;
 
     // Data
     // Data - Variables
     private int questionNumber;
+    private int questionsAnswered;
     // Data - Bools
     private bool question01Answered = false;
     private bool question02Answered = false;
@@ -127,6 +173,11 @@ public class GameControllerScript : MonoBehaviour
     private bool question08Answered = false;
     private bool question09Answered = false;
     private bool question10Answered = false;
+    private bool question11Answered = false;
+    private bool question12Answered = false;
+    private bool question13Answered = false;
+    private bool question14Answered = false;
+    private bool question15Answered = false;
 
 
     // Start is called before the first frame update
@@ -139,69 +190,103 @@ public class GameControllerScript : MonoBehaviour
         q01Option03 = GameObject.Find("Q01Option03");
         q01Option04 = GameObject.Find("Q01Option04");
         q01Option05 = GameObject.Find("Q01Option05");
-        // Options - Question 01
+        // Options - Question 02
         q02Option01 = GameObject.Find("Q02Option01");
         q02Option02 = GameObject.Find("Q02Option02");
         q02Option03 = GameObject.Find("Q02Option03");
         q02Option04 = GameObject.Find("Q02Option04");
         q02Option05 = GameObject.Find("Q02Option05");
-        // Options - Question 01
+        // Options - Question 03
         q03Option01 = GameObject.Find("Q03Option01");
         q03Option02 = GameObject.Find("Q03Option02");
         q03Option03 = GameObject.Find("Q03Option03");
         q03Option04 = GameObject.Find("Q03Option04");
         q03Option05 = GameObject.Find("Q03Option05");
-        // Options - Question 01
+        // Options - Question 04
         q04Option01 = GameObject.Find("Q04Option01");
         q04Option02 = GameObject.Find("Q04Option02");
         q04Option03 = GameObject.Find("Q04Option03");
         q04Option04 = GameObject.Find("Q04Option04");
         q04Option05 = GameObject.Find("Q04Option05");
-        // Options - Question 01
+        // Options - Question 05
         q05Option01 = GameObject.Find("Q05Option01");
         q05Option02 = GameObject.Find("Q05Option02");
         q05Option03 = GameObject.Find("Q05Option03");
         q05Option04 = GameObject.Find("Q05Option04");
         q05Option05 = GameObject.Find("Q05Option05");
-        // Options - Question 01
+        // Options - Question 06
         q06Option01 = GameObject.Find("Q06Option01");
         q06Option02 = GameObject.Find("Q06Option02");
         q06Option03 = GameObject.Find("Q06Option03");
         q06Option04 = GameObject.Find("Q06Option04");
         q06Option05 = GameObject.Find("Q06Option05");
-        // Options - Question 01
+        // Options - Question 07
         q07Option01 = GameObject.Find("Q07Option01");
         q07Option02 = GameObject.Find("Q07Option02");
         q07Option03 = GameObject.Find("Q07Option03");
         q07Option04 = GameObject.Find("Q07Option04");
         q07Option05 = GameObject.Find("Q07Option05");
-        // Options - Question 01
+        // Options - Question 08
         q08Option01 = GameObject.Find("Q08Option01");
         q08Option02 = GameObject.Find("Q08Option02");
         q08Option03 = GameObject.Find("Q08Option03");
         q08Option04 = GameObject.Find("Q08Option04");
         q08Option05 = GameObject.Find("Q08Option05");
-        // Options - Question 01
+        // Options - Question 09
         q09Option01 = GameObject.Find("Q09Option01");
         q09Option02 = GameObject.Find("Q09Option02");
         q09Option03 = GameObject.Find("Q09Option03");
         q09Option04 = GameObject.Find("Q09Option04");
         q09Option05 = GameObject.Find("Q09Option05");
-        // Options - Question 01
+        // Options - Question 10
         q10Option01 = GameObject.Find("Q10Option01");
         q10Option02 = GameObject.Find("Q10Option02");
         q10Option03 = GameObject.Find("Q10Option03");
         q10Option04 = GameObject.Find("Q10Option04");
         q10Option05 = GameObject.Find("Q10Option05");
-        // Options - Question 01
+        // Options - Question 11
+        q11Option01 = GameObject.Find("Q11Option01");
+        q11Option02 = GameObject.Find("Q11Option02");
+        q11Option03 = GameObject.Find("Q11Option03");
+        q11Option04 = GameObject.Find("Q11Option04");
+        q11Option05 = GameObject.Find("Q11Option05");
+        // Options - Question 12
+        q12Option01 = GameObject.Find("Q12Option01");
+        q12Option02 = GameObject.Find("Q12Option02");
+        q12Option03 = GameObject.Find("Q12Option03");
+        q12Option04 = GameObject.Find("Q12Option04");
+        q12Option05 = GameObject.Find("Q12Option05");
+        // Options - Question 13
+        q13Option01 = GameObject.Find("Q13Option01");
+        q13Option02 = GameObject.Find("Q13Option02");
+        q13Option03 = GameObject.Find("Q13Option03");
+        q13Option04 = GameObject.Find("Q13Option04");
+        q13Option05 = GameObject.Find("Q13Option05");
+        // Options - Question 14
+        q14Option01 = GameObject.Find("Q14Option01");
+        q14Option02 = GameObject.Find("Q14Option02");
+        q14Option03 = GameObject.Find("Q14Option03");
+        q14Option04 = GameObject.Find("Q14Option04");
+        q14Option05 = GameObject.Find("Q14Option05");
+        // Options - Question 15
+        q15Option01 = GameObject.Find("Q15Option01");
+        q15Option02 = GameObject.Find("Q15Option02");
+        q15Option03 = GameObject.Find("Q15Option03");
+        q15Option04 = GameObject.Find("Q15Option04");
+        q15Option05 = GameObject.Find("Q15Option05");
+
+        // Options - Question Bonus
         qBOption01 = GameObject.Find("QBOption01");
         qBOption02 = GameObject.Find("QBOption02");
         qBOption03 = GameObject.Find("QBOption03");
         qBOption04 = GameObject.Find("QBOption04");
         qBOption05 = GameObject.Find("QBOption05");
 
+
         // Screens
+        // Screens - Start Game Screen
         startGameScreen = GameObject.Find("StartGameScreen");
+        // Screens - Questions
         question01Screen = GameObject.Find("Question01Screen");
         question02Screen = GameObject.Find("Question02Screen");
         question03Screen = GameObject.Find("Question03Screen");
@@ -212,7 +297,13 @@ public class GameControllerScript : MonoBehaviour
         question08Screen = GameObject.Find("Question08Screen");
         question09Screen = GameObject.Find("Question09Screen");
         question10Screen = GameObject.Find("Question10Screen");
+        question11Screen = GameObject.Find("Question11Screen");
+        question12Screen = GameObject.Find("Question12Screen");
+        question13Screen = GameObject.Find("Question13Screen");
+        question14Screen = GameObject.Find("Question14Screen");
+        question15Screen = GameObject.Find("Question15Screen");
         questionBScreen = GameObject.Find("QuestionBScreen");
+        // Screens - Job Options
         geneticCounselorScreen = GameObject.Find("GeneticCounselorScreen");
         foodScientistScreen = GameObject.Find("FoodScientistScreen");
         microbiologistScreen = GameObject.Find("MicrobiologistScreen");
@@ -230,12 +321,18 @@ public class GameControllerScript : MonoBehaviour
         q08NextButton = GameObject.Find("q08NextButton");
         q09NextButton = GameObject.Find("q09NextButton");
         q10NextButton = GameObject.Find("q10NextButton");
+        q11NextButton = GameObject.Find("q11NextButton");
+        q12NextButton = GameObject.Find("q12NextButton");
+        q13NextButton = GameObject.Find("q13NextButton");
+        q14NextButton = GameObject.Find("q14NextButton");
+        q15NextButton = GameObject.Find("q15NextButton");
         qBNextButton = GameObject.Find("qBNextButton");
     }
 
     void Start()
     {
         // Screens
+        // Screens - Questions
         question01Screen.SetActive(false);
         question02Screen.SetActive(false);
         question03Screen.SetActive(false);
@@ -246,7 +343,13 @@ public class GameControllerScript : MonoBehaviour
         question08Screen.SetActive(false);
         question09Screen.SetActive(false);
         question10Screen.SetActive(false);
+        question11Screen.SetActive(false);
+        question12Screen.SetActive(false);
+        question13Screen.SetActive(false);
+        question14Screen.SetActive(false);
+        question15Screen.SetActive(false);
         questionBScreen.SetActive(false);
+        // Screens - Job Options
         geneticCounselorScreen.SetActive(false);
         foodScientistScreen.SetActive(false);
         microbiologistScreen.SetActive(false);
@@ -264,6 +367,11 @@ public class GameControllerScript : MonoBehaviour
         q08NextButton.SetActive(false);
         q09NextButton.SetActive(false);
         q10NextButton.SetActive(false);
+        q11NextButton.SetActive(false);
+        q12NextButton.SetActive(false);
+        q13NextButton.SetActive(false);
+        q14NextButton.SetActive(false);
+        q15NextButton.SetActive(false);
         qBNextButton.SetActive(false);
     }
 
@@ -344,6 +452,7 @@ public class GameControllerScript : MonoBehaviour
         //question02Screen.SetActive(true);
 
         question01Answered = true;
+        questionsAnswered++;
         RandomQuestion01();
     }
 
@@ -408,6 +517,7 @@ public class GameControllerScript : MonoBehaviour
         //question03Screen.SetActive(true);
 
         question02Answered = true;
+        questionsAnswered++;
         RandomQuestion01();
     }
 
@@ -472,6 +582,7 @@ public class GameControllerScript : MonoBehaviour
         //question04Screen.SetActive(true);
 
         question03Answered = true;
+        questionsAnswered++;
         RandomQuestion01();
     }
 
@@ -536,6 +647,7 @@ public class GameControllerScript : MonoBehaviour
         //question05Screen.SetActive(true);
 
         question04Answered = true;
+        questionsAnswered++;
         RandomQuestion01();
     }
 
@@ -600,6 +712,7 @@ public class GameControllerScript : MonoBehaviour
         //question06Screen.SetActive(true);
 
         question05Answered = true;
+        questionsAnswered++;
         RandomQuestion01();
     }
 
@@ -664,6 +777,7 @@ public class GameControllerScript : MonoBehaviour
         //question07Screen.SetActive(true);
 
         question06Answered = true;
+        questionsAnswered++;
         RandomQuestion01();
     }
 
@@ -728,6 +842,7 @@ public class GameControllerScript : MonoBehaviour
         //question08Screen.SetActive(true);
 
         question07Answered = true;
+        questionsAnswered++;
         RandomQuestion01();
     }
 
@@ -792,6 +907,7 @@ public class GameControllerScript : MonoBehaviour
         //question09Screen.SetActive(true);
 
         question08Answered = true;
+        questionsAnswered++;
         RandomQuestion01();
     }
 
@@ -856,9 +972,11 @@ public class GameControllerScript : MonoBehaviour
         //question10Screen.SetActive(true);
 
         question09Answered = true;
+        questionsAnswered++;
         RandomQuestion01();
     }
 
+    // Question 10
     public void Q10Option01()
     {
         q10Option01.SetActive(true);
@@ -914,15 +1032,342 @@ public class GameControllerScript : MonoBehaviour
         pharmaceuticalSalesRep += 1;
         q10NextButton.SetActive(true);
     }
-    public void Q10Completed01()
+    public void Q10Completed()
     {
         question10Screen.SetActive(false);
 
         question10Answered = true;
+        questionsAnswered++;
         RandomQuestion01();
     }
 
-    public void Q10Completed02()
+    // Question 11
+    public void Q11Option01()
+    {
+        q11Option01.SetActive(true);
+        q11Option02.SetActive(false);
+        q11Option03.SetActive(false);
+        q11Option04.SetActive(false);
+        q11Option05.SetActive(false);
+
+        geneticCounselor += 1;
+        q11NextButton.SetActive(true);
+    }
+    public void Q11Option02()
+    {
+        q11Option01.SetActive(false);
+        q11Option02.SetActive(true);
+        q11Option03.SetActive(false);
+        q11Option04.SetActive(false);
+        q11Option05.SetActive(false);
+
+        foodScientist += 1;
+        q11NextButton.SetActive(true);
+    }
+    public void Q11Option03()
+    {
+        q11Option01.SetActive(false);
+        q11Option02.SetActive(false);
+        q11Option03.SetActive(true);
+        q11Option04.SetActive(false);
+        q11Option05.SetActive(false);
+
+        microbiologist += 1;
+        q11NextButton.SetActive(true);
+    }
+    public void Q11Option04()
+    {
+        q11Option01.SetActive(false);
+        q11Option02.SetActive(false);
+        q11Option03.SetActive(false);
+        q11Option04.SetActive(true);
+        q11Option05.SetActive(false);
+
+        forensicScientist += 1;
+        q11NextButton.SetActive(true);
+    }
+    public void Q11Option05()
+    {
+        q11Option01.SetActive(false);
+        q11Option02.SetActive(false);
+        q11Option03.SetActive(false);
+        q11Option04.SetActive(false);
+        q11Option05.SetActive(true);
+
+        pharmaceuticalSalesRep += 1;
+        q11NextButton.SetActive(true);
+    }
+    public void Q11Completed()
+    {
+        question11Screen.SetActive(false);
+
+        question11Answered = true;
+        questionsAnswered++;
+        RandomQuestion01();
+    }
+
+    // Question 12
+    public void Q12Option01()
+    {
+        q12Option01.SetActive(true);
+        q12Option02.SetActive(false);
+        q12Option03.SetActive(false);
+        q12Option04.SetActive(false);
+        q12Option05.SetActive(false);
+
+        geneticCounselor += 1;
+        q12NextButton.SetActive(true);
+    }
+    public void Q12Option02()
+    {
+        q12Option01.SetActive(false);
+        q12Option02.SetActive(true);
+        q12Option03.SetActive(false);
+        q12Option04.SetActive(false);
+        q12Option05.SetActive(false);
+
+        foodScientist += 1;
+        q12NextButton.SetActive(true);
+    }
+    public void Q12Option03()
+    {
+        q12Option01.SetActive(false);
+        q12Option02.SetActive(false);
+        q12Option03.SetActive(true);
+        q12Option04.SetActive(false);
+        q12Option05.SetActive(false);
+
+        microbiologist += 1;
+        q12NextButton.SetActive(true);
+    }
+    public void Q12Option04()
+    {
+        q12Option01.SetActive(false);
+        q12Option02.SetActive(false);
+        q12Option03.SetActive(false);
+        q12Option04.SetActive(true);
+        q12Option05.SetActive(false);
+
+        forensicScientist += 1;
+        q12NextButton.SetActive(true);
+    }
+    public void Q12Option05()
+    {
+        q12Option01.SetActive(false);
+        q12Option02.SetActive(false);
+        q12Option03.SetActive(false);
+        q12Option04.SetActive(false);
+        q12Option05.SetActive(true);
+
+        pharmaceuticalSalesRep += 1;
+        q12NextButton.SetActive(true);
+    }
+    public void Q12Completed()
+    {
+        question12Screen.SetActive(false);
+
+        question12Answered = true;
+        questionsAnswered++;
+        RandomQuestion01();
+    }
+
+    // Question 13
+    public void Q13Option01()
+    {
+        q13Option01.SetActive(true);
+        q13Option02.SetActive(false);
+        q13Option03.SetActive(false);
+        q13Option04.SetActive(false);
+        q13Option05.SetActive(false);
+
+        geneticCounselor += 1;
+        q13NextButton.SetActive(true);
+    }
+    public void Q13Option02()
+    {
+        q13Option01.SetActive(false);
+        q13Option02.SetActive(true);
+        q13Option03.SetActive(false);
+        q13Option04.SetActive(false);
+        q13Option05.SetActive(false);
+
+        foodScientist += 1;
+        q13NextButton.SetActive(true);
+    }
+    public void Q13Option03()
+    {
+        q13Option01.SetActive(false);
+        q13Option02.SetActive(false);
+        q13Option03.SetActive(true);
+        q13Option04.SetActive(false);
+        q13Option05.SetActive(false);
+
+        microbiologist += 1;
+        q13NextButton.SetActive(true);
+    }
+    public void Q13Option04()
+    {
+        q13Option01.SetActive(false);
+        q13Option02.SetActive(false);
+        q13Option03.SetActive(false);
+        q13Option04.SetActive(true);
+        q13Option05.SetActive(false);
+
+        forensicScientist += 1;
+        q13NextButton.SetActive(true);
+    }
+    public void Q13Option05()
+    {
+        q13Option01.SetActive(false);
+        q13Option02.SetActive(false);
+        q13Option03.SetActive(false);
+        q13Option04.SetActive(false);
+        q13Option05.SetActive(true);
+
+        pharmaceuticalSalesRep += 1;
+        q13NextButton.SetActive(true);
+    }
+    public void Q13Completed()
+    {
+        question13Screen.SetActive(false);
+
+        question13Answered = true;
+        questionsAnswered++;
+        RandomQuestion01();
+    }
+
+    // Question 14
+    public void Q14Option01()
+    {
+        q14Option01.SetActive(true);
+        q14Option02.SetActive(false);
+        q14Option03.SetActive(false);
+        q14Option04.SetActive(false);
+        q14Option05.SetActive(false);
+
+        geneticCounselor += 1;
+        q14NextButton.SetActive(true);
+    }
+    public void Q14Option02()
+    {
+        q14Option01.SetActive(false);
+        q14Option02.SetActive(true);
+        q14Option03.SetActive(false);
+        q14Option04.SetActive(false);
+        q14Option05.SetActive(false);
+
+        foodScientist += 1;
+        q14NextButton.SetActive(true);
+    }
+    public void Q14Option03()
+    {
+        q14Option01.SetActive(false);
+        q14Option02.SetActive(false);
+        q14Option03.SetActive(true);
+        q14Option04.SetActive(false);
+        q14Option05.SetActive(false);
+
+        microbiologist += 1;
+        q14NextButton.SetActive(true);
+    }
+    public void Q14Option04()
+    {
+        q14Option01.SetActive(false);
+        q14Option02.SetActive(false);
+        q14Option03.SetActive(false);
+        q14Option04.SetActive(true);
+        q14Option05.SetActive(false);
+
+        forensicScientist += 1;
+        q14NextButton.SetActive(true);
+    }
+    public void Q14Option05()
+    {
+        q14Option01.SetActive(false);
+        q14Option02.SetActive(false);
+        q14Option03.SetActive(false);
+        q14Option04.SetActive(false);
+        q14Option05.SetActive(true);
+
+        pharmaceuticalSalesRep += 1;
+        q14NextButton.SetActive(true);
+    }
+    public void Q14Completed()
+    {
+        question14Screen.SetActive(false);
+
+        question14Answered = true;
+        questionsAnswered++;
+        RandomQuestion01();
+    }
+
+    // Question 15
+    public void Q15Option01()
+    {
+        q15Option01.SetActive(true);
+        q15Option02.SetActive(false);
+        q15Option03.SetActive(false);
+        q15Option04.SetActive(false);
+        q15Option05.SetActive(false);
+
+        geneticCounselor += 1;
+        q15NextButton.SetActive(true);
+    }
+    public void Q15Option02()
+    {
+        q15Option01.SetActive(false);
+        q15Option02.SetActive(true);
+        q15Option03.SetActive(false);
+        q15Option04.SetActive(false);
+        q15Option05.SetActive(false);
+
+        foodScientist += 1;
+        q15NextButton.SetActive(true);
+    }
+    public void Q15Option03()
+    {
+        q15Option01.SetActive(false);
+        q15Option02.SetActive(false);
+        q15Option03.SetActive(true);
+        q15Option04.SetActive(false);
+        q15Option05.SetActive(false);
+
+        microbiologist += 1;
+        q15NextButton.SetActive(true);
+    }
+    public void Q15Option04()
+    {
+        q15Option01.SetActive(false);
+        q15Option02.SetActive(false);
+        q15Option03.SetActive(false);
+        q15Option04.SetActive(true);
+        q15Option05.SetActive(false);
+
+        forensicScientist += 1;
+        q15NextButton.SetActive(true);
+    }
+    public void Q15Option05()
+    {
+        q15Option01.SetActive(false);
+        q15Option02.SetActive(false);
+        q15Option03.SetActive(false);
+        q15Option04.SetActive(false);
+        q15Option05.SetActive(true);
+
+        pharmaceuticalSalesRep += 1;
+        q15NextButton.SetActive(true);
+    }
+    public void Q15Completed()
+    {
+        question15Screen.SetActive(false);
+
+        question15Answered = true;
+        questionsAnswered++;
+        RandomQuestion01();
+    }
+
+    // All Questions Answered
+    public void AllQuestionsCompleted()
     {
         //question10Screen.SetActive(false);
         //question02Screen.SetActive(true);
@@ -953,6 +1398,7 @@ public class GameControllerScript : MonoBehaviour
         }
     }
 
+    // Bonus Question
     public void QBOption01()
     {
         qBOption01.SetActive(true);
@@ -1034,15 +1480,16 @@ public class GameControllerScript : MonoBehaviour
         }
     }
 
+    // Random Question 
     public void RandomQuestion01()
     {
-        if (question01Answered == true && question02Answered == true && question03Answered == true && question04Answered == true && question05Answered == true && question06Answered == true && question07Answered == true && question08Answered == true && question09Answered == true && question10Answered == true)
+        if (questionsAnswered >= 10)
         {
-            Q10Completed02();
+            AllQuestionsCompleted();
         }
         else
         {
-            questionNumber = UnityEngine.Random.Range(1, 11);
+            questionNumber = UnityEngine.Random.Range(1, 16);
             RandomQuestionChecker();
         }
         //questionNumber = UnityEngine.Random.Range(1, 10);
@@ -1090,6 +1537,26 @@ public class GameControllerScript : MonoBehaviour
         {
             RandomQuestion01();
         }
+        else if (questionNumber == 11 && question11Answered == true)
+        {
+            RandomQuestion01();
+        }
+        else if (questionNumber == 12 && question12Answered == true)
+        {
+            RandomQuestion01();
+        }
+        else if (questionNumber == 13 && question13Answered == true)
+        {
+            RandomQuestion01();
+        }
+        else if (questionNumber == 14 && question14Answered == true)
+        {
+            RandomQuestion01();
+        }
+        else if (questionNumber == 15 && question15Answered == true)
+        {
+            RandomQuestion01();
+        }
         else
         {
             RandomQuestion02();
@@ -1130,6 +1597,195 @@ public class GameControllerScript : MonoBehaviour
             case 10:
                 question10Screen.SetActive(true);
                 break;
+            case 11:
+                question11Screen.SetActive(true);
+                break;
+            case 12:
+                question12Screen.SetActive(true);
+                break;
+            case 13:
+                question13Screen.SetActive(true);
+                break;
+            case 14:
+                question14Screen.SetActive(true);
+                break;
+            case 15:
+                question15Screen.SetActive(true);
+                break;
         }
+    }
+
+
+    // Job Option Links
+    // Job Option Links - Genetic Counselor
+    // Job Option Links - Genetic Counselor - More Information
+    public void Job01MoreLink()
+    {
+        // Job 01 - More Info
+        Application.OpenURL("http://unity3d.com/");
+    }
+    // Job Option Links - Genetic Counselor - Companies
+    public void Job01Comp01Link()
+    {
+        // Job 01 - Comapny 01
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job01Comp02Link()
+    {
+        // Job 01 - Comapny 02
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job01Comp03Link()
+    {
+        // Job 01 - Comapny 03
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job01Comp04Link()
+    {
+        // Job 01 - Comapny 04
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job01Comp05Link()
+    {
+        // Job 01 - Comapny 05
+        Application.OpenURL("http://unity3d.com/");
+    }
+    // Job Option Links - Food Scientist
+    // Job Option Links - Food Scientist - More Information
+    public void Job02MoreLink()
+    {
+        // Job 02 - More Info
+        Application.OpenURL("http://unity3d.com/");
+    }
+    // Job Option Links - Food Scientist - Companies
+    public void Job02Comp01Link()
+    {
+        // Job 02 - Comapny 01
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job02Comp02Link()
+    {
+        // Job 02 - Comapny 02
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job02Comp03Link()
+    {
+        // Job 02 - Comapny 03
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job02Comp04Link()
+    {
+        // Job 02 - Comapny 04
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job02Comp05Link()
+    {
+        // Job 02 - Comapny 05
+        Application.OpenURL("http://unity3d.com/");
+    }
+    // Job Option Links - Microbiologist
+    // Job Option Links - Microbiologist - More Information
+    public void Job03MoreLink()
+    {
+        // Job 03 - More Info
+        Application.OpenURL("http://unity3d.com/");
+    }
+    // Job Option Links - Microbiologist - Companies
+    public void Job03Comp01Link()
+    {
+        // Job 03 - Comapny 01
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job03Comp02Link()
+    {
+        // Job 03 - Comapny 02
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job03Comp03Link()
+    {
+        // Job 03 - Comapny 03
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job03Comp04Link()
+    {
+        // Job 03 - Comapny 04
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job03Comp05Link()
+    {
+        // Job 03 - Comapny 05
+        Application.OpenURL("http://unity3d.com/");
+    }
+    // Job Option Links - Forensic Scientist
+    // Job Option Links - Forensic Scientist - More Information
+    public void Job04MoreLink()
+    {
+        // Job 04 - More Info
+        Application.OpenURL("http://unity3d.com/");
+    }
+    // Job Option Links - Genetic Counselor - Companies
+    public void Job04Comp01Link()
+    {
+        // Job 04 - Comapny 01
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job04Comp02Link()
+    {
+        // Job 04 - Comapny 02
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job04Comp03Link()
+    {
+        // Job 04 - Comapny 03
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job04Comp04Link()
+    {
+        // Job 04 - Comapny 04
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job04Comp05Link()
+    {
+        // Job 04 - Comapny 05
+        Application.OpenURL("http://unity3d.com/");
+    }
+    // Job Option Links - Pharmaceutical Sales Rep
+    // Job Option Links - Pharmaceutical Sales Rep - More Information
+    public void Job05MoreLink()
+    {
+        // Job 05 - More Info
+        Application.OpenURL("http://unity3d.com/");
+    }
+    // Job Option Links - Pharmaceutical Sales Rep - Companies
+    public void Job05Comp01Link()
+    {
+        // Job 05 - Comapny 01
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job05Comp02Link()
+    {
+        // Job 05 - Comapny 02
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job05Comp03Link()
+    {
+        // Job 05 - Comapny 03
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job05Comp04Link()
+    {
+        // Job 05 - Comapny 04
+        Application.OpenURL("http://unity3d.com/");
+    }
+    public void Job05Comp05Link()
+    {
+        // Job 05 - Comapny 05
+        Application.OpenURL("http://unity3d.com/");
+    }
+
+
+    public void ToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
