@@ -25,6 +25,11 @@ public class MainMenuScript : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
 
+    public void ToPRIMESTEM()
+    {
+        Application.OpenURL("https://linktr.ee/primestemtrioucf");
+    }
+
     public void ExitGame()
     {
         Application.Quit();
