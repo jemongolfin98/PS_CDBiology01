@@ -1622,165 +1622,165 @@ public class GameControllerScript : MonoBehaviour
     public void Job01MoreLink()
     {
         // Job 01 - More Info
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.bls.gov/ooh/healthcare/genetic-counselors.htm");
     }
     // Job Option Links - Genetic Counselor - Companies
     public void Job01Comp01Link()
     {
         // Job 01 - Comapny 01
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.mayoclinic.org/");
     }
     public void Job01Comp02Link()
     {
         // Job 01 - Comapny 02
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://myriad.com/");
     }
     public void Job01Comp03Link()
     {
         // Job 01 - Comapny 03
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.ucsfhealth.org/");
     }
     public void Job01Comp04Link()
     {
         // Job 01 - Comapny 04
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.legacyhealth.org/");
     }
     public void Job01Comp05Link()
     {
         // Job 01 - Comapny 05
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://intermountainhealthcare.org/");
     }
     // Job Option Links - Food Scientist
     // Job Option Links - Food Scientist - More Information
     public void Job02MoreLink()
     {
         // Job 02 - More Info
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.bls.gov/oes/2023/may/oes191012.htm");
     }
     // Job Option Links - Food Scientist - Companies
     public void Job02Comp01Link()
     {
         // Job 02 - Comapny 01
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.nestle.com/");
     }
     public void Job02Comp02Link()
     {
         // Job 02 - Comapny 02
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.generalmills.com/");
     }
     public void Job02Comp03Link()
     {
         // Job 02 - Comapny 03
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.danone.com/");
     }
     public void Job02Comp04Link()
     {
         // Job 02 - Comapny 04
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.conagrabrands.com/");
     }
     public void Job02Comp05Link()
     {
         // Job 02 - Comapny 05
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.unilever.com/");
     }
     // Job Option Links - Microbiologist
     // Job Option Links - Microbiologist - More Information
     public void Job03MoreLink()
     {
         // Job 03 - More Info
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.bls.gov/ooh/life-physical-and-social-science/microbiologists.htm");
     }
     // Job Option Links - Microbiologist - Companies
     public void Job03Comp01Link()
     {
         // Job 03 - Comapny 01
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.cdc.gov/index.html");
     }
     public void Job03Comp02Link()
     {
         // Job 03 - Comapny 02
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://na.mxns.com/");
     }
     public void Job03Comp03Link()
     {
         // Job 03 - Comapny 03
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.pfizer.com/");
     }
     public void Job03Comp04Link()
     {
         // Job 03 - Comapny 04
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.jnj.com/");
     }
     public void Job03Comp05Link()
     {
         // Job 03 - Comapny 05
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.eurofins.com/");
     }
     // Job Option Links - Forensic Scientist
     // Job Option Links - Forensic Scientist - More Information
     public void Job04MoreLink()
     {
         // Job 04 - More Info
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.bls.gov/ooh/life-physical-and-social-science/forensic-science-technicians.htm");
     }
     // Job Option Links - Genetic Counselor - Companies
     public void Job04Comp01Link()
     {
         // Job 04 - Comapny 01
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.cellmarkforensics.co.uk/");
     }
     public void Job04Comp02Link()
     {
         // Job 04 - Comapny 02
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.signaturescience.com/");
     }
     public void Job04Comp03Link()
     {
         // Job 04 - Comapny 03
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.astreaforensics.com/");
     }
     public void Job04Comp04Link()
     {
         // Job 04 - Comapny 04
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://verogen.com/");
     }
     public void Job04Comp05Link()
     {
         // Job 04 - Comapny 05
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.ande.com/");
     }
     // Job Option Links - Pharmaceutical Sales Rep
     // Job Option Links - Pharmaceutical Sales Rep - More Information
     public void Job05MoreLink()
     {
         // Job 05 - More Info
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://research.com/careers/how-to-become-a-pharmaceutical-sales-rep-salary-and-career-paths");
     }
     // Job Option Links - Pharmaceutical Sales Rep - Companies
     public void Job05Comp01Link()
     {
         // Job 05 - Comapny 01
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.abbvie.com/");
     }
     public void Job05Comp02Link()
     {
         // Job 05 - Comapny 02
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.novartis.com/");
     }
     public void Job05Comp03Link()
     {
         // Job 05 - Comapny 03
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.astrazeneca.com/");
     }
     public void Job05Comp04Link()
     {
         // Job 05 - Comapny 04
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.merck.com/");
     }
     public void Job05Comp05Link()
     {
         // Job 05 - Comapny 05
-        Application.OpenURL("http://unity3d.com/");
+        Application.OpenURL("https://www.jnj.com/");
     }
 
 
