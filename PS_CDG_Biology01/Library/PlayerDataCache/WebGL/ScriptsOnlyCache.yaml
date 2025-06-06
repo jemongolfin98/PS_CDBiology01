@@ -6,7 +6,6 @@ ScriptsOnlyBuild:
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
-    - UnityEngine.U2D.Animation.BufferManager
     - UnityEngine.U2D.Animation.SpriteSkinComposite
     - UnityEngine.U2D.Animation.SpriteSkinUpdateHelper
     Unity.2D.IK.Editor.dll:
@@ -2347,4 +2346,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/GameScene.unity
-  playerPath: C:/Users/je425824/git/PS_CDBiology01/PS_CDG_Biology01/Builds/WebBuilds/WebBuild02
+  playerPath: C:/Users/je425824/git/PS_CDBiology01/PS_CDG_Biology01/Builds/WebBuilds/WebBuild03
