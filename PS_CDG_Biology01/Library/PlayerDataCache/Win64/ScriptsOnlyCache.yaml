@@ -71,8 +71,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    Unity.ShaderGraph.Editor.dll:
-    - UnityEditor.ShaderGraph.ShaderGraphProjectSettings
     Unity.TextMeshPro:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -281,6 +279,9 @@ ScriptsOnlyBuild:
     methodName: Q10Option02
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
+    methodName: QB03Option01
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
     methodName: Q10Option03
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
@@ -288,6 +289,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Job05Comp04Link
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
+    methodName: QB03Option02
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Q06Option03
@@ -300,6 +304,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Job02Comp02Link
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
+    methodName: QB02Option03
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Q14Option03
@@ -321,6 +328,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Q15Option01
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
+    methodName: QB02Option01
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Job05Comp03Link
@@ -347,6 +357,9 @@ ScriptsOnlyBuild:
     methodName: Q14Completed
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
+    methodName: QB05Option02
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
     methodName: Job03Comp01Link
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
@@ -359,6 +372,9 @@ ScriptsOnlyBuild:
     methodName: Q04Completed
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
+    methodName: QB04Option04
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
     methodName: Q06Option05
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
@@ -366,6 +382,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Q06Option01
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
+    methodName: QB02Option04
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Job01Comp01Link
@@ -386,7 +405,7 @@ ScriptsOnlyBuild:
     methodName: Q08Option02
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
-    methodName: QBOption01
+    methodName: QB01Option01
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Job02Comp01Link
@@ -398,10 +417,16 @@ ScriptsOnlyBuild:
     methodName: Q07Option03
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
+    methodName: QB05Option04
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
     methodName: Job02Comp03Link
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Q03Completed
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
+    methodName: QB04Option02
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Q15Completed
@@ -413,10 +438,10 @@ ScriptsOnlyBuild:
     methodName: Job04Comp03Link
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
-    methodName: QBOption02
+    methodName: QB01Option02
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
-    methodName: QBOption04
+    methodName: QB01Option04
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Q11Completed
@@ -426,6 +451,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Job01Comp03Link
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
+    methodName: QB05Option05
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Q14Option02
@@ -452,6 +480,9 @@ ScriptsOnlyBuild:
     methodName: Q02Option04
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
+    methodName: QB03Option03
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
     methodName: Q11Option01
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
@@ -464,13 +495,16 @@ ScriptsOnlyBuild:
     methodName: ToMainMenu
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
-    methodName: QBOption03
+    methodName: QB01Option03
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Job01Comp05Link
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Job05MoreLink
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
+    methodName: QB04Option03
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Q07Option05
@@ -512,7 +546,7 @@ ScriptsOnlyBuild:
     methodName: Q11Option05
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
-    methodName: QBCompleted
+    methodName: QB01Completed
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Q05Option05
@@ -525,6 +559,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Q08Option04
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
+    methodName: QB05Option01
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Q02Option02
@@ -548,7 +585,16 @@ ScriptsOnlyBuild:
     methodName: Q10Option01
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
+    methodName: QB05Completed
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
+    methodName: QB03Option04
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
     methodName: Q15Option02
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
+    methodName: QB02Completed
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Q08Option03
@@ -563,10 +609,22 @@ ScriptsOnlyBuild:
     methodName: Q05Completed
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
+    methodName: QB03Option05
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
+    methodName: QB02Option02
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
     methodName: Q09Option05
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
+    methodName: QB02Option05
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
     methodName: Job02Comp04Link
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
+    methodName: QB04Option05
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Job04Comp01Link
@@ -575,7 +633,13 @@ ScriptsOnlyBuild:
     methodName: Q01Option02
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
+    methodName: QB05Option03
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
     methodName: Job01Comp02Link
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
+    methodName: QB04Option01
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Q09Completed
@@ -611,7 +675,7 @@ ScriptsOnlyBuild:
     methodName: ToMainMenu
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
-    methodName: QBOption05
+    methodName: QB01Option05
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Q12Option02
@@ -624,6 +688,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Q13Option04
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
+    methodName: QB03Completed
+  - assembly: Assembly-CSharp
+    fullTypeName: GameControllerScript
+    methodName: QB04Completed
   - assembly: Assembly-CSharp
     fullTypeName: GameControllerScript
     methodName: Job03Comp02Link
@@ -2349,4 +2419,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/GameScene.unity
-  playerPath: C:/Users/je425824/git/PS_CDBiology01/PS_CDG_Biology01/Builds/WindowsBuilds/WindowsBuild03/PS_CDG_Biology01.exe
+  playerPath: C:/Users/je425824/git/PS_CDBiology01/PS_CDG_Biology01/Builds/WindowsBuilds/WindowsBuild04/PS_CDG_Biology01.exe
