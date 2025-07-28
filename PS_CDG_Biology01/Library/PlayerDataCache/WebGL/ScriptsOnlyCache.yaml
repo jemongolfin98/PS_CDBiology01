@@ -71,8 +71,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    Unity.ShaderGraph.Editor.dll:
-    - UnityEditor.ShaderGraph.ShaderGraphProjectSettings
     Unity.TextMeshPro:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -2421,4 +2419,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/GameScene.unity
-  playerPath: C:/Users/je425824/git/PS_CDBiology01/PS_CDG_Biology01/Builds/WebBuilds/WebBuild04
+  playerPath: C:/Users/je425824/git/PS_CDBiology01/PS_CDG_Biology01/Builds/WebBuilds/WebBuild_0-8-0
