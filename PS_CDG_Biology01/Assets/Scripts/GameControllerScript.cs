@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -204,6 +205,29 @@ public class GameControllerScript : MonoBehaviour
     private int questionNumber;
     private int questionsAnswered;
     private int bonusQuestionNumber;
+    // Data - Variables - Questions
+    // Data - Variables - Questions - Main
+    private int q01Option;
+    private int q02Option;
+    private int q03Option;
+    private int q04Option;
+    private int q05Option;
+    private int q06Option;
+    private int q07Option;
+    private int q08Option;
+    private int q09Option;
+    private int q10Option;
+    private int q11Option;
+    private int q12Option;
+    private int q13Option;
+    private int q14Option;
+    private int q15Option;
+    // Data - Variables - Questions - Bonus
+    private int qB01Option;
+    private int qB02Option;
+    private int qB03Option;
+    private int qB04Option;
+    private int qB05Option;
     // Data - Bools
     // Data - Bools - Main Questions
     private bool question01Answered = false;
@@ -929,7 +953,17 @@ public class GameControllerScript : MonoBehaviour
         q05Option = 5;
         q05NextButton.SetActive(true);
     }
-    
+    public void Q05Undo()
+    {
+        q05Option01.SetActive(true);
+        q05Option02.SetActive(true);
+        q05Option03.SetActive(true);
+        q05Option04.SetActive(true);
+        q05Option05.SetActive(true);
+
+        q05Option = 0;
+        q06NextButton.SetActive(false);
+    }
     public void Q05Completed()
     {
         question05Screen.SetActive(false);
@@ -1684,7 +1718,7 @@ public class GameControllerScript : MonoBehaviour
         q13Option04.SetActive(false);
         q13Option05.SetActive(true);
 
-        q013ption = 5;
+        q13Option = 5;
         q13NextButton.SetActive(true);
     }
     public void Q13Undo()
@@ -1747,7 +1781,7 @@ public class GameControllerScript : MonoBehaviour
         q14Option04.SetActive(false);
         q14Option05.SetActive(false);
 
-        foodScientist += 1;
+        q14Option = 2;
         q14NextButton.SetActive(true);
     }
     public void Q14Option03()
@@ -1758,7 +1792,7 @@ public class GameControllerScript : MonoBehaviour
         q14Option04.SetActive(false);
         q14Option05.SetActive(false);
 
-        microbiologist += 1;
+        q14Option = 3;
         q14NextButton.SetActive(true);
     }
     public void Q14Option04()
@@ -1769,7 +1803,7 @@ public class GameControllerScript : MonoBehaviour
         q14Option04.SetActive(true);
         q14Option05.SetActive(false);
 
-        forensicScientist += 1;
+        q14Option = 4;
         q14NextButton.SetActive(true);
     }
     public void Q14Option05()
@@ -1780,7 +1814,7 @@ public class GameControllerScript : MonoBehaviour
         q14Option04.SetActive(false);
         q14Option05.SetActive(true);
 
-        pharmaceuticalSalesRep += 1;
+        q14Option = 5;
         q14NextButton.SetActive(true);
     }
     public void Q14Undo()
@@ -1832,7 +1866,7 @@ public class GameControllerScript : MonoBehaviour
         q15Option04.SetActive(false);
         q15Option05.SetActive(false);
 
-        geneticCounselor += 1;
+        q15Option = 1;
         q15NextButton.SetActive(true);
     }
     public void Q15Option02()
@@ -1843,7 +1877,7 @@ public class GameControllerScript : MonoBehaviour
         q15Option04.SetActive(false);
         q15Option05.SetActive(false);
 
-        foodScientist += 1;
+        q15Option = 2;
         q15NextButton.SetActive(true);
     }
     public void Q15Option03()
@@ -1854,7 +1888,7 @@ public class GameControllerScript : MonoBehaviour
         q15Option04.SetActive(false);
         q15Option05.SetActive(false);
 
-        microbiologist += 1;
+        q15Option = 3;
         q15NextButton.SetActive(true);
     }
     public void Q15Option04()
@@ -1865,7 +1899,7 @@ public class GameControllerScript : MonoBehaviour
         q15Option04.SetActive(true);
         q15Option05.SetActive(false);
 
-        forensicScientist += 1;
+        q15Option = 4;
         q15NextButton.SetActive(true);
     }
     public void Q15Option05()
@@ -1876,7 +1910,7 @@ public class GameControllerScript : MonoBehaviour
         q15Option04.SetActive(false);
         q15Option05.SetActive(true);
 
-        pharmaceuticalSalesRep += 1;
+        q15Option = 5;
         q15NextButton.SetActive(true);
     }
     public void Q15Undo()
@@ -1958,7 +1992,7 @@ public class GameControllerScript : MonoBehaviour
         qB01Option04.SetActive(false);
         qB01Option05.SetActive(false);
 
-        geneticCounselor += 2;
+        qB01Option = 1;
         qB01NextButton.SetActive(true);
     }
     public void QB01Option02()
@@ -1969,7 +2003,7 @@ public class GameControllerScript : MonoBehaviour
         qB01Option04.SetActive(false);
         qB01Option05.SetActive(false);
 
-        foodScientist += 2;
+        qB01Option = 2;
         qB01NextButton.SetActive(true);
     }
     public void QB01Option03()
@@ -1980,7 +2014,7 @@ public class GameControllerScript : MonoBehaviour
         qB01Option04.SetActive(false);
         qB01Option05.SetActive(false);
 
-        microbiologist += 2;
+        qB01Option = 3;
         qB01NextButton.SetActive(true);
     }
     public void QB01Option04()
@@ -1991,7 +2025,7 @@ public class GameControllerScript : MonoBehaviour
         qB01Option04.SetActive(true);
         qB01Option05.SetActive(false);
 
-        forensicScientist += 2;
+        qB01Option = 4;
         qB01NextButton.SetActive(true);
     }
     public void QB01Option05()
@@ -2002,7 +2036,7 @@ public class GameControllerScript : MonoBehaviour
         qB01Option04.SetActive(false);
         qB01Option05.SetActive(true);
 
-        pharmaceuticalSalesRep += 2;
+        qB01Option = 5;
         qB01NextButton.SetActive(true);
     }
     public void QB01Undo()
@@ -2040,7 +2074,7 @@ public class GameControllerScript : MonoBehaviour
         }
 
         questionB01Answered = true;
-        questionsAnswered++;
+        //questionsAnswered++;
         QBCompleted();
     }
     
@@ -2053,7 +2087,7 @@ public class GameControllerScript : MonoBehaviour
         qB02Option04.SetActive(false);
         qB02Option05.SetActive(false);
 
-        geneticCounselor += 2;
+        qB02Option = 1;
         qB02NextButton.SetActive(true);
     }
     public void QB02Option02()
@@ -2064,7 +2098,7 @@ public class GameControllerScript : MonoBehaviour
         qB02Option04.SetActive(false);
         qB02Option05.SetActive(false);
 
-        foodScientist += 2;
+        qB02Option = 2;
         qB02NextButton.SetActive(true);
     }
     public void QB02Option03()
@@ -2075,7 +2109,7 @@ public class GameControllerScript : MonoBehaviour
         qB02Option04.SetActive(false);
         qB02Option05.SetActive(false);
 
-        microbiologist += 2;
+        qB02Option = 3;
         qB02NextButton.SetActive(true);
     }
     public void QB02Option04()
@@ -2086,7 +2120,7 @@ public class GameControllerScript : MonoBehaviour
         qB02Option04.SetActive(true);
         qB02Option05.SetActive(false);
 
-        forensicScientist += 2;
+        qB02Option = 4;
         qB02NextButton.SetActive(true);
     }
     public void QB02Option05()
@@ -2097,7 +2131,7 @@ public class GameControllerScript : MonoBehaviour
         qB02Option04.SetActive(false);
         qB02Option05.SetActive(true);
 
-        pharmaceuticalSalesRep += 2;
+        qB02Option = 5;
         qB02NextButton.SetActive(true);
     }
     public void QB02Undo()
@@ -2113,7 +2147,7 @@ public class GameControllerScript : MonoBehaviour
     }
     public void QB02Completed()
     {
-        questionB01Screen.SetActive(false);
+        questionB02Screen.SetActive(false);
 
         switch (qB02Option)
         {
@@ -2135,7 +2169,7 @@ public class GameControllerScript : MonoBehaviour
         }
 
         questionB02Answered = true;
-        questionsAnswered++;
+        //questionsAnswered++;
         QBCompleted();
     }
     
@@ -2148,7 +2182,7 @@ public class GameControllerScript : MonoBehaviour
         qB03Option04.SetActive(false);
         qB03Option05.SetActive(false);
 
-        geneticCounselor += 2;
+        qB03Option = 1;
         qB03NextButton.SetActive(true);
     }
     public void QB03Option02()
@@ -2159,7 +2193,7 @@ public class GameControllerScript : MonoBehaviour
         qB03Option04.SetActive(false);
         qB03Option05.SetActive(false);
 
-        foodScientist += 2;
+        qB03Option = 2;
         qB03NextButton.SetActive(true);
     }
     public void QB03Option03()
@@ -2170,7 +2204,7 @@ public class GameControllerScript : MonoBehaviour
         qB03Option04.SetActive(false);
         qB03Option05.SetActive(false);
 
-        microbiologist += 2;
+        qB03Option = 3;
         qB03NextButton.SetActive(true);
     }
     public void QB03Option04()
@@ -2181,7 +2215,7 @@ public class GameControllerScript : MonoBehaviour
         qB03Option04.SetActive(true);
         qB03Option05.SetActive(false);
 
-        forensicScientist += 2;
+        qB03Option = 4;
         qB03NextButton.SetActive(true);
     }
     public void QB03Option05()
@@ -2192,7 +2226,7 @@ public class GameControllerScript : MonoBehaviour
         qB03Option04.SetActive(false);
         qB03Option05.SetActive(true);
 
-        pharmaceuticalSalesRep += 2;
+        qB03Option = 5;
         qB03NextButton.SetActive(true);
     }
     public void QB03Undo()
@@ -2230,7 +2264,7 @@ public class GameControllerScript : MonoBehaviour
         }
 
         questionB03Answered = true;
-        questionsAnswered++;
+        //questionsAnswered++;
         QBCompleted();
     }
     
@@ -2243,7 +2277,7 @@ public class GameControllerScript : MonoBehaviour
         qB04Option04.SetActive(false);
         qB04Option05.SetActive(false);
 
-        geneticCounselor += 2;
+        qB04Option = 1;
         qB04NextButton.SetActive(true);
     }
     public void QB04Option02()
@@ -2254,7 +2288,7 @@ public class GameControllerScript : MonoBehaviour
         qB04Option04.SetActive(false);
         qB04Option05.SetActive(false);
 
-        foodScientist += 2;
+        qB04Option = 2;
         qB04NextButton.SetActive(true);
     }
     public void QB04Option03()
@@ -2265,7 +2299,7 @@ public class GameControllerScript : MonoBehaviour
         qB04Option04.SetActive(false);
         qB04Option05.SetActive(false);
 
-        microbiologist += 2;
+        qB04Option = 3;
         qB04NextButton.SetActive(true);
     }
     public void QB04Option04()
@@ -2276,7 +2310,7 @@ public class GameControllerScript : MonoBehaviour
         qB04Option04.SetActive(true);
         qB04Option05.SetActive(false);
 
-        forensicScientist += 2;
+        qB04Option = 4;
         qB04NextButton.SetActive(true);
     }
     public void QB04Option05()
@@ -2287,7 +2321,7 @@ public class GameControllerScript : MonoBehaviour
         qB04Option04.SetActive(false);
         qB04Option05.SetActive(true);
 
-        pharmaceuticalSalesRep += 2;
+        qB04Option = 5;
         qB04NextButton.SetActive(true);
     }
     public void QB04Undo()
@@ -2325,7 +2359,7 @@ public class GameControllerScript : MonoBehaviour
         }
 
         questionB04Answered = true;
-        questionsAnswered++;
+        //questionsAnswered++;
         QBCompleted();
     }
     
@@ -2338,7 +2372,7 @@ public class GameControllerScript : MonoBehaviour
         qB05Option04.SetActive(false);
         qB05Option05.SetActive(false);
 
-        geneticCounselor += 2;
+        qB05Option = 1;
         qB05NextButton.SetActive(true);
     }
     public void QB05Option02()
@@ -2349,7 +2383,7 @@ public class GameControllerScript : MonoBehaviour
         qB05Option04.SetActive(false);
         qB05Option05.SetActive(false);
 
-        foodScientist += 2;
+        qB05Option = 2;
         qB05NextButton.SetActive(true);
     }
     public void QB05Option03()
@@ -2360,7 +2394,7 @@ public class GameControllerScript : MonoBehaviour
         qB05Option04.SetActive(false);
         qB05Option05.SetActive(false);
 
-        microbiologist += 2;
+        qB05Option = 3;
         qB05NextButton.SetActive(true);
     }
     public void QB05Option04()
@@ -2371,7 +2405,7 @@ public class GameControllerScript : MonoBehaviour
         qB05Option04.SetActive(true);
         qB05Option05.SetActive(false);
 
-        forensicScientist += 2;
+        qB05Option = 4;
         qB05NextButton.SetActive(true);
     }
     public void QB05Option05()
@@ -2382,7 +2416,7 @@ public class GameControllerScript : MonoBehaviour
         qB05Option04.SetActive(false);
         qB05Option05.SetActive(true);
 
-        pharmaceuticalSalesRep += 2;
+        qB05Option = 5;
         qB05NextButton.SetActive(true);
     }
     public void QB05Undo()
@@ -2420,7 +2454,7 @@ public class GameControllerScript : MonoBehaviour
         }
 
         questionB05Answered = true;
-        questionsAnswered++;
+        //questionsAnswered++;
         QBCompleted();
     }
 
@@ -2584,6 +2618,9 @@ public class GameControllerScript : MonoBehaviour
             case 15:
                 question15Screen.SetActive(true);
                 break;
+            case 16:
+                RandomQuestion01();
+                break;
         }
     }
 
@@ -2639,6 +2676,9 @@ public class GameControllerScript : MonoBehaviour
                 break;
             case 5:
                 questionB05Screen.SetActive(true);
+                break;
+            case 6:
+                RandomBonusQuestion01();
                 break;
         }
     }

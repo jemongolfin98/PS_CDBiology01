@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "PS_CDG_Biology01.sln"
+    "dotnet.defaultSolution": "PS_CDG_Biology01.slnx"
 }
