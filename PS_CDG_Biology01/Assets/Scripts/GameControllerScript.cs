@@ -371,7 +371,6 @@ public class GameControllerScript : MonoBehaviour
         q15Option03 = GameObject.Find("Q15Option03");
         q15Option04 = GameObject.Find("Q15Option04");
         q15Option05 = GameObject.Find("Q15Option05");
-
         // Options - Bonus Questions
         // Options - Bonus Questions - Question 01
         qB01Option01 = GameObject.Find("QB01Option01");
@@ -442,51 +441,50 @@ public class GameControllerScript : MonoBehaviour
         // Buttons - Questions
         // Buttons - Questions - Next
         // Buttons - Questions - Next - Main
-        q01NextButton = GameObject.Find("q01NextButton");
-        q02NextButton = GameObject.Find("q02NextButton");
-        q03NextButton = GameObject.Find("q03NextButton");
-        q04NextButton = GameObject.Find("q04NextButton");
-        q05NextButton = GameObject.Find("q05NextButton");
-        q06NextButton = GameObject.Find("q06NextButton");
-        q07NextButton = GameObject.Find("q07NextButton");
-        q08NextButton = GameObject.Find("q08NextButton");
-        q09NextButton = GameObject.Find("q09NextButton");
-        q10NextButton = GameObject.Find("q10NextButton");
-        q11NextButton = GameObject.Find("q11NextButton");
-        q12NextButton = GameObject.Find("q12NextButton");
-        q13NextButton = GameObject.Find("q13NextButton");
-        q14NextButton = GameObject.Find("q14NextButton");
-        q15NextButton = GameObject.Find("q15NextButton");
+        q01NextButton = GameObject.Find("Q01NextButton");
+        q02NextButton = GameObject.Find("Q02NextButton");
+        q03NextButton = GameObject.Find("Q03NextButton");
+        q04NextButton = GameObject.Find("Q04NextButton");
+        q05NextButton = GameObject.Find("Q05NextButton");
+        q06NextButton = GameObject.Find("Q06NextButton");
+        q07NextButton = GameObject.Find("Q07NextButton");
+        q08NextButton = GameObject.Find("Q08NextButton");
+        q09NextButton = GameObject.Find("Q09NextButton");
+        q10NextButton = GameObject.Find("Q10NextButton");
+        q11NextButton = GameObject.Find("Q11NextButton");
+        q12NextButton = GameObject.Find("Q12NextButton");
+        q13NextButton = GameObject.Find("Q13NextButton");
+        q14NextButton = GameObject.Find("Q14NextButton");
+        q15NextButton = GameObject.Find("Q15NextButton");
         // Buttons - Questions - Next - Bonus
-        qB01NextButton = GameObject.Find("qB01NextButton");
-        qB02NextButton = GameObject.Find("qB02NextButton");
-        qB03NextButton = GameObject.Find("qB03NextButton");
-        qB04NextButton = GameObject.Find("qB04NextButton");
-        qB05NextButton = GameObject.Find("qB05NextButton");
+        qB01NextButton = GameObject.Find("QB01NextButton");
+        qB02NextButton = GameObject.Find("QB02NextButton");
+        qB03NextButton = GameObject.Find("QB03NextButton");
+        qB04NextButton = GameObject.Find("QB04NextButton");
+        qB05NextButton = GameObject.Find("QB05NextButton");
         // Buttons - Questions - Undo
         // Buttons - Questions - Undo - Main
-        q01NextButton = GameObject.Find("q01NextButton");
-        q02NextButton = GameObject.Find("q02NextButton");
-        q03NextButton = GameObject.Find("q03NextButton");
-        q04NextButton = GameObject.Find("q04NextButton");
-        q05NextButton = GameObject.Find("q05NextButton");
-        q06NextButton = GameObject.Find("q06NextButton");
-        q07NextButton = GameObject.Find("q07NextButton");
-        q08NextButton = GameObject.Find("q08NextButton");
-        q09NextButton = GameObject.Find("q09NextButton");
-        q10NextButton = GameObject.Find("q10NextButton");
-        q11NextButton = GameObject.Find("q11NextButton");
-        q12NextButton = GameObject.Find("q12NextButton");
-        q13NextButton = GameObject.Find("q13NextButton");
-        q14NextButton = GameObject.Find("q14NextButton");
-        q15NextButton = GameObject.Find("q15NextButton");
+        q01UndoButton = GameObject.Find("Q01UndoButton");
+        q02UndoButton = GameObject.Find("Q02UndoButton");
+        q03UndoButton = GameObject.Find("Q03UndoButton");
+        q04UndoButton = GameObject.Find("Q04UndoButton");
+        q05UndoButton = GameObject.Find("Q05UndoButton");
+        q06UndoButton = GameObject.Find("Q06UndoButton");
+        q07UndoButton = GameObject.Find("Q07UndoButton");
+        q08UndoButton = GameObject.Find("Q08UndoButton");
+        q09UndoButton = GameObject.Find("Q09UndoButton");
+        q10UndoButton = GameObject.Find("Q10UndoButton");
+        q11UndoButton = GameObject.Find("Q11UndoButton");
+        q12UndoButton = GameObject.Find("Q12UndoButton");
+        q13UndoButton = GameObject.Find("Q13UndoButton");
+        q14UndoButton = GameObject.Find("Q14UndoButton");
+        q15UndoButton = GameObject.Find("Q15UndoButton");
         // Buttons - Questions - Undo - Bonus
-        qB01UndoButton = GameObject.Find("qB01UndoButton");
-        qB02UndoButton = GameObject.Find("qB02UndoButton");
-        qB03UndoButton = GameObject.Find("qB03UndoButton");
-        qB04UndoButton = GameObject.Find("qB04UndoButton");
-        qB05UndoButton = GameObject.Find("qB05UndoButton");
-        
+        qB01UndoButton = GameObject.Find("QB01UndoButton");
+        qB02UndoButton = GameObject.Find("QB02UndoButton");
+        qB03UndoButton = GameObject.Find("QB03UndoButton");
+        qB04UndoButton = GameObject.Find("QB04UndoButton");
+        qB05UndoButton = GameObject.Find("QB05UndoButton");
     }
 
     void Start()
@@ -523,7 +521,9 @@ public class GameControllerScript : MonoBehaviour
         pharmaceuticalSalesRepScreen.SetActive(false);
 
         // Buttons
-        // Buttons - Main Questions
+        // Buttons - Questions
+        // Buttons - Questions - Next
+        // Buttons - Questions - Next - Main
         q01NextButton.SetActive(false);
         q02NextButton.SetActive(false);
         q03NextButton.SetActive(false);
@@ -539,12 +539,35 @@ public class GameControllerScript : MonoBehaviour
         q13NextButton.SetActive(false);
         q14NextButton.SetActive(false);
         q15NextButton.SetActive(false);
-        // Buttons - Bonus Questions
+        // Buttons - Questions - Next - Bonus
         qB01NextButton.SetActive(false);
         qB02NextButton.SetActive(false);
         qB03NextButton.SetActive(false);
         qB04NextButton.SetActive(false);
         qB05NextButton.SetActive(false);
+        // Buttons - Questions - Undo
+        // Buttons - Questions - Undo - Main
+        q01UndoButton.SetActive(false);
+        q02UndoButton.SetActive(false);
+        q03UndoButton.SetActive(false);
+        q04UndoButton.SetActive(false);
+        q05UndoButton.SetActive(false);
+        q06UndoButton.SetActive(false);
+        q07UndoButton.SetActive(false);
+        q08UndoButton.SetActive(false);
+        q09UndoButton.SetActive(false);
+        q10UndoButton.SetActive(false);
+        q11UndoButton.SetActive(false);
+        q12UndoButton.SetActive(false);
+        q13UndoButton.SetActive(false);
+        q14UndoButton.SetActive(false);
+        q15UndoButton.SetActive(false);
+        // Buttons - Questions - Undo - Bonus
+        qB01UndoButton.SetActive(false);
+        qB02UndoButton.SetActive(false);
+        qB03UndoButton.SetActive(false);
+        qB04UndoButton.SetActive(false);
+        qB05UndoButton.SetActive(false);
     }
 
 
